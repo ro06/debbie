@@ -11,6 +11,17 @@ Article: https-medium-com-hackyroot-happy-birthday-using-aframe-9d2f0d177853
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
+      <a-scene embedded arjs="sourceType:webcam;debugUIEnabled: false;">
+        <a-marker-camera preset="hiro">
+            <a-entity rotation="-90 0 0">
+                <a-entity position="0 -7 -15" particle-system="preset:default;accelerationValue:0,-10,0;color:#f9e154;particleCount:1000;direction:-1;rotationAxis:z;rotation:-90 0 0"></a-entity>
+            </a-entity>
+            <!-- <a-entity text="value: Happy Birthday Kajal" material="color: red; src: #texture"></a-entity> -->
+            <a-entity text-geometry="value: Happy Birthday Zartu"></a-entity>
+            <a-entity gltf-model="#cake"></a-entity>
+        </a-marker-camera>
+    </a-scene>
+    
 <a-scene embedded arjs="debugUIEnabled: false;">
 
     <a-assets>
